@@ -1,0 +1,75 @@
+Myshell - Command Line Intepretor - User Manuel
+
+
+1.  Description of operation and commands
+    -------------------------------------
+    A shell is a computer program that exposes an operating system's services to a human user or other programs.
+
+    myshell is a simple command-line interpreter that runs in a Unix or Linux environment.
+    this shell interpreter executes commands built internally, external UNIX commands, and i/o redirections
+
+    => Internal commands are:
+        Cd <directory> -> for changing the default directory to <directory>.
+
+        clr -> for cleariing shell screen.
+
+        dir <directory> -> to list the content of <directory>. 
+                            if <directory> is not parsed, it lists the content of the current working directory.
+        
+        echo <comment> -> to diplay <comment> on the shell display, followed by a new Line.
+
+        quit -> to exit the shell.
+
+        environ -> list all environment strings.
+
+        help -> this will print the user manual to the shell display.
+
+        pause -> to pause all shell activities until "ENTER" is pressed.
+
+    => Some External Commands are:
+        ls <directory> -> to list the content of <directory>
+                            this is similar to the internal *dir command.
+        
+        date -> to display system date and time.
+
+        mkdir <directory> -> to create a new directory <directory>
+
+
+2.  i/o Redirections with myshell
+    ----------------------------
+    * i/o redirection (input/output redirection) is an operation that is performed in the shell by 
+    using some special notations to redirect the output of many commands to devices, files, and to the input of other commands.
+
+    * The three common symbols used are "<, >, and >>".
+
+    * To REDIRECT a standard output to a file we use the ">" character
+        eg. ls > text.txt.
+        this runs the command ls and writes the result into the file text.txt if the file exists. But if not, it creates the file.
+    
+    * To APPEND a standard output or result to a file we use ">>" character
+        eg. ls >> text.txt 
+        this runs the command ls, and then append the result to the file text.txt if the file exists. But if not, it creates the file
+        and writes into it.
+    
+    * To REDIRECT a standard input from a file we use the "<" character
+        eg. sort < text.txt
+        this will process the file content of text.txt and display it on the shell output.
+
+    * To perform both input and output redirect look at the example below
+        eg. echo < text.text > text2.txt
+        will process the text.txt file and write the output to the text2.txt file.
+    
+
+3.  Overall Layout
+    --------------
+    After running the shell's executable file, 
+    the termial displays <username>@:<pathname>/myshell, where;
+
+    <username> is the current user who has logged in,
+    <pathname>/myshell is the full path to the shell executable.
+
+    There is an insertion point at the end of the display which shows that, 
+    the program is waiting for your input.
+
+    ALL shell related errors are displayed in the form,
+    myshell : <error>, where <error> is the error message
